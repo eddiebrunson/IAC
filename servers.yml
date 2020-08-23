@@ -114,11 +114,14 @@ Resources:
   WebAppLB:
     Type: AWS::ElasticLoadBalancingV2::LoadBalancer
     Properties:
+      Name: !Sub "${EnvironmentName}-ALB"
+      Scheme: internet-facing  
       Subnets:
       - Fn::ImportValue: !Sub "${EnvironmentName}-PUB1-SN"
       - Fn::ImportValue: !Sub "${EnvironmentName}-PUB2-SN"
       SecurityGroups:
       - Ref: LBSecGroup
+      Type: application
   Listener:
     Type: AWS::ElasticLoadBalancingV2::Listener
     Properties:
