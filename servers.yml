@@ -160,7 +160,7 @@ Resources:
       VpcId: 
         Fn::ImportValue:
           Fn::Sub: "${EnvironmentName}-VPCID"
- S3Role:
+  S3Role:
     Type: AWS::IAM::Role
     Properties:
       AssumeRolePolicyDocument:
@@ -175,7 +175,6 @@ Resources:
       ManagedPolicyArns:
         - "arn:aws:iam::aws:policy/service-role/AmazonEC2RoleforSSM"
       Path: /
-
   RolePolicies:
     Type: AWS::IAM::Policy
     Properties:
@@ -196,7 +195,6 @@ Resources:
       Path: "/"
       Roles:
         - Ref: "S3Role"
-
 Outputs:
   WebAppLB: 
       Description: "The Load Balancer URL"
