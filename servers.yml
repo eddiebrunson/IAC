@@ -61,7 +61,7 @@ Resources:
     Properties:
       ImageId: ami-005bdb005fb00e791
       InstanceType: t2.micro
-      KeyName: UdacityCFNEC2Key
+      KeyName: Udadevops
       BlockDeviceMappings:
         - DeviceName: /dev/sdk
           Ebs:
@@ -82,7 +82,7 @@ Resources:
       ImageId: ami-005bdb005fb00e791
       InstanceType: t2.medium
       IamInstanceProfile: !Ref ProfileWithRole
-      KeyName: UdacityCFNEC2Key
+      KeyName: Udadevops
       BlockDeviceMappings:
       - DeviceName: "/dev/sdk"
         Ebs:
