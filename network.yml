@@ -1,6 +1,6 @@
 Description: >
     Eddie Brunson / Deploy Infrastructure as Code
-    This Cloud DevOps Project deploys a VPC, with a pair of public and private subnets spread 
+    This Cloud DevOps Project deploys a VPC, using this CloudFormation script, with a pair of public and private subnets spread 
     across two Availabilty Zones. It deploys an Internet Gateway, with a default 
     route on the public subnets. It deploys a pair of NAT Gateways (one in each AZ), 
     and default routes for them in the private subnets.
